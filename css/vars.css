@@ -26,8 +26,8 @@
 
 @media (max-width: 380px) {
   :root {
-    --column-number: calc(50% - calc(calc(var(--index) * 0.3) / 2));
-    --column-price: calc(25% - calc(calc(var(--index) * 0.3) / 2));
-    --column-btn: calc(25% - calc(calc(var(--index) * 0.3) / 2));
+    --column-number: calc(45% - calc(calc(var(--index) * 0.3) / 2));
+    --column-price: calc(32% - calc(calc(var(--index) * 0.3) / 2));
+    --column-btn: calc(23% - calc(calc(var(--index) * 0.3) / 2));
   }
 }

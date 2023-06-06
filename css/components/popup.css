@@ -38,6 +38,28 @@
   padding-right: 57px;
 }
 
+.popup .popup-number::before {
+  position: absolute;
+  content: 'Номер скопирован';
+  font-size: 10px;
+  padding: 2px 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: -10px;
+  opacity: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+}
+
+.popup .popup-number.copied::before {
+  top: -22px;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: all 0.3s;
+}
+
 .popup .popup-number button {
   display: inline-block;
   position: absolute;
@@ -55,8 +77,51 @@
   cursor: pointer;
 }
 
+.popup .popup-number.copied button img {
+  display: block;
+  position: absolute;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+.popup .popup-number .popup-copy__check {
+  position: relative;
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+
+.popup .popup-number.copied .popup-copy__check {
+  display: flex;
+}
+
+.popup .popup-number.copied .popup-copy__check::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 5px;
+  border: 3px solid transparent;
+  border-left-color: var(--silver-color);
+  border-bottom-color: var(--silver-color);
+  transform: rotate(-45deg);
+  animation: check 0.3s ease;
+}
+
+@keyframes check {
+  from {
+    scale: 0;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
 .popup .popup-number button img {
   width: 20px;
+  transform: scale(1);
+  transition: all 0.3s ease;
 }
 
 .popup .popup-number button:hover {

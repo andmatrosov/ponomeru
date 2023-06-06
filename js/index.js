@@ -219,7 +219,17 @@ function copy(str) {
 	focus.focus(); // Возвращаем фокус туда, где был
 }
 
+function setCheck() {
+	const popupPhoneWrapp = document.querySelector('.popup-number');
+	popupPhoneWrapp.classList.add('copied');
+
+	setTimeout(() => {
+		popupPhoneWrapp.classList.remove('copied');
+	}, 4000)
+}
+
 popupCopyButton.onclick = function () {
 	copy(popupPhone.innerHTML);
+	setCheck()
 }
 
