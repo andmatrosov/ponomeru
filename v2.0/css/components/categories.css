@@ -39,173 +39,83 @@
   width: 32%;
   position: relative;
   border: none;
-  background-color: transparent;
   font-family: inherit;
   font-size: inherit;
   text-transform: uppercase;
   overflow: hidden;
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-size: 200%;
+  animation: shine 3s linear infinite;
+}
+
+.categories-list__item.premium {
+  background-image: linear-gradient(
+    45deg,
+    transparent 20%,
+    transparent 40%,
+    var(--premium-color) 50%,
+    var(--premium-color) 55%,
+    transparent 70%,
+    transparent 100%
+  );
+}
+
+.categories-list__item.gold {
+  background-image: linear-gradient(
+    45deg,
+    transparent 20%,
+    transparent 40%,
+    var(--gold-color) 50%,
+    var(--gold-color) 55%,
+    transparent 70%,
+    transparent 100%
+  );
+}
+.categories-list__item.silver {
+  background-image: linear-gradient(
+    45deg,
+    transparent 20%,
+    transparent 40%,
+    var(--silver-color) 50%,
+    var(--silver-color) 55%,
+    transparent 70%,
+    transparent 100%
+  );
+}
+.categories-list__item.combo {
+  background-image: linear-gradient(
+    45deg,
+    transparent 20%,
+    transparent 40%,
+    var(--combo-color) 50%,
+    var(--combo-color) 55%,
+    transparent 70%,
+    transparent 100%
+  );
+}
+.categories-list__item.other {
+  background-image: linear-gradient(
+    45deg,
+    transparent 20%,
+    transparent 40%,
+    var(--other-color) 50%,
+    var(--other-color) 55%,
+    transparent 70%,
+    transparent 100%
+  );
 }
 
 .categories-list__item > .item-inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: calc(1vw * 0.1) calc(1vw * 0.4);
-  border: 4px solid var(--border-color);
+  height: calc(100% - 8px);
+  width: calc(100% - 8px);
+  margin: 4px;
+  padding: min(calc(1vw * 0.2), 8px) min(calc(1vw * 0.4), 10px);
   color: #fff;
-}
-
-.categories-list__item .line-1 {
-  animation: outline1 3s infinite ease;
-}
-.categories-list__item .line-2 {
-  animation: outline2 3s infinite ease;
-}
-.categories-list__item .line-3 {
-  animation: outline3 3s infinite ease;
-}
-.categories-list__item .line-4 {
-  animation: outline4 3s infinite ease;
-}
-
-.line-1 {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 4px;
-  left: 0;
-  bottom: 0;
-}
-.line-2 {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 4px;
-  left: 0;
-  top: 0;
-}
-.line-3 {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 4px;
-  right: 0;
-  top: 0;
-}
-.line-4 {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 4px;
-  right: 0;
-  bottom: 0;
-}
-
-.premium > .line-1,
-.premium > .line-2,
-.premium > .line-3,
-.premium > .line-4 {
-  background-color: var(--premium-color, yellow);
-}
-
-.gold > .line-1,
-.gold > .line-2,
-.gold > .line-3,
-.gold > .line-4 {
-  background-color: var(--gold-color, yellow);
-}
-
-.silver > .line-1,
-.silver > .line-2,
-.silver > .line-3,
-.silver > .line-4 {
-  background-color: var(--silver-color, yellow);
-}
-
-.combo > .line-1,
-.combo > .line-2,
-.combo > .line-3,
-.combo > .line-4 {
-  background-color: var(--combo-color, yellow);
-}
-
-.other > .line-1,
-.other > .line-2,
-.other > .line-3,
-.other > .line-4 {
-  background-color: var(--other-color, yellow);
-}
-
-.categories-list__item.hide span[class^='line-'] {
-  background-color: transparent;
-}
-
-@keyframes outline1 {
-  0% {
-    height: 100%;
-    bottom: 0;
-  }
-  54% {
-    height: 0;
-    bottom: 100%;
-  }
-  55% {
-    height: 0;
-    bottom: 0;
-  }
-  100% {
-    height: 100%;
-    bottom: 0;
-  }
-}
-@keyframes outline2 {
-  0% {
-    width: 0;
-    left: 0;
-  }
-  55% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-}
-
-@keyframes outline3 {
-  0% {
-    height: 100%;
-    top: 0;
-  }
-  54% {
-    height: 0;
-    top: 100%;
-  }
-  55% {
-    height: 0;
-    top: 0;
-  }
-  100% {
-    height: 100%;
-    top: 0;
-  }
-}
-
-@keyframes outline4 {
-  0% {
-    width: 0;
-    right: 0;
-  }
-  55% {
-    width: 100%;
-    right: 0;
-  }
-  100% {
-    width: 0;
-    right: 100%;
-  }
+  background-color: black;
 }
 
 @media (max-width: 600px) {

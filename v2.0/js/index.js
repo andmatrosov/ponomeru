@@ -37,31 +37,15 @@ function generateComponentInner(item) {
 	return (`
 		<div>
 			<span>${item.category}</span>
-			<span class="line-1"></span>
-			<span class="line-2"></span>
-			<span class="line-3"></span>
-			<span class="line-4"></span>
 		</div>
 		<div>
 			<span class="number-list__number">${item.number}</span>
-			<span class="line-1"></span>
-			<span class="line-2"></span>
-			<span class="line-3"></span>
-			<span class="line-4"></span>
 		</div>
 		<div>
 			<span>${item.price}</span>
-			<span class="line-1"></span>
-			<span class="line-2"></span>
-			<span class="line-3"></span>
-			<span class="line-4"></span>
 		</div>
 		<button data-num="${item.number}">
 			<span>Take 🤚</span>
-			<span class="line-1"></span>
-			<span class="line-2"></span>
-			<span class="line-3"></span>
-			<span class="line-4"></span>
 		</button>
 	`);
 }
@@ -79,10 +63,6 @@ function pushCategoriesToPage(arr) {
 
 		categoryBtn.innerHTML = `
 					<span class="item-inner">${item}</span>
-					<span class="line-1"></span>
-					<span class="line-2"></span>
-					<span class="line-3"></span>
-					<span class="line-4"></span>
 		`;
 		categoryBtn.addEventListener('click', (e) => {
 			const target = e.target;

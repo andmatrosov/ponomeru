@@ -7,7 +7,7 @@
   --border-color: #46484a;
 
   --index: calc(1vw + 1vh);
-  --font-size: min(calc(1vw * 0.8), 30px);
+  --font-size: max(min(calc(1vw * 0.8), 30px), 12px);
 
   /* NUMBER COLUMNS */
   --column-category: 15%;
@@ -16,7 +16,7 @@
   --column-btn: min(20%, 150px);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   :root {
     --column-number: calc(44% - calc(calc(var(--index) * 0.3) / 2));
     --column-price: calc(35% - calc(calc(var(--index) * 0.3) / 2));

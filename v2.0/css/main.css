@@ -19,7 +19,7 @@ html {
 body {
   font-family: 'Russo One', sans-serif;
   font-weight: 400;
-  background-image: linear-gradient(to top, #0a031d, #1e011f);
+  background-color: #09011e;
   background-size: 100vh;
   min-height: 100%;
   color: #f4f4f4;
