@@ -57,7 +57,7 @@ function generateComponentInner(item) {
 			<span class="line-4"></span>
 		</div>
 		<button data-num="${item.number}">
-			<span>Take 👋</span>
+			<span>Take 🤚</span>
 			<span class="line-1"></span>
 			<span class="line-2"></span>
 			<span class="line-3"></span>
@@ -165,13 +165,16 @@ function isTripleCategory(str) {
 	return true;
 }
 
-const popup = document.querySelector('.popup-wrapper');
-const popupClose = document.querySelector('.popup-close');
+// POPUPS
+
+const popupBuy = document.getElementById('popup-buy');
+const popupInfo = document.getElementById('popup-info');
+const popupClose = document.querySelectorAll('.popup-close');
 
 function openPopup(number) {
-	const popupNumber = popup.querySelector('.popup-number p');
-	popup.style.display = 'flex';
-
+	const popupNumber = popupBuy.querySelector('.popup-number p');
+	popupBuy.style.display = 'flex';
+	document.body.style.maxHeight = '100vh';
 	popupNumber.innerHTML = number;
 }
 
@@ -181,26 +184,30 @@ function clearPopup() {
 }
 
 function closePopup() {
-	popup.style.display = 'none';
+	popupInfo.style.display = 'none';
+	popupBuy.style.display = 'none';
+	document.body.removeAttribute('style')
 	clearPopup();
 }
 
-popup.addEventListener('click', (e) => {
-	let target = e.target;
-	if (target !== popup) return;
-	e.stopPropagation();
-	closePopup();
-}, true)
+[popupBuy, popupInfo].forEach(popup => {
+	popup.addEventListener('click', (e) => {
+		let target = e.target;
+		if (target !== popup) return;
+		e.stopPropagation();
+		closePopup();
+	}, true)
+})
 
-popupClose.addEventListener('click', closePopup);
+popupClose.forEach(btn => {
+	btn.addEventListener('click', closePopup);
+})
 
-function start() {
-	pushCategoriesToPage(sortedNumbers);
-	pushNumbersListToPage(sortedNumbers);
+
+function infoPopupOpen() {
+	document.getElementById('popup-info').style.display = 'flex';
+	document.body.style.maxHeight = '100vh';
 }
-
-start();
-
 
 const popupCopyButton = document.getElementById('popup-copy'),
 	popupPhone = document.querySelector('.popup-number p');
@@ -233,3 +240,18 @@ popupCopyButton.onclick = function () {
 	setCheck()
 }
 
+// ИНФА О КАТЕГОРИЯХ
+const infoLink = document.querySelector('.categories-info');
+
+infoLink.addEventListener('click', (e) => {
+	e.preventDefault()
+	infoPopupOpen()
+})
+
+
+function start() {
+	pushCategoriesToPage(sortedNumbers);
+	pushNumbersListToPage(sortedNumbers);
+}
+
+start();

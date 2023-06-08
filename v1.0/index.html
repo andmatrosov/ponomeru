@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/main.css">
+	<title>PONOMERU — магазин красивых номеров</title>
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<meta name="theme-color" content="#1e011f" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+
+<body>
+	<!-- 
+		Катеогории:
+
+		Premium
+		Gold
+		Silver
+		Combo x2
+		Combo x3
+		Combo x4
+		000
+		666
+		777
+	-->
+
+	<header class="header">
+		<div class="container">
+			<h1>
+				Ponomeru
+				<span>
+					Магазин красивых номеров
+				</span>
+			</h1>
+		</div>
+	</header>
+	<section class="categories">
+		<div class="container">
+			<div class="categories-list">
+			</div>
+			<p>
+				<a href="" class="categories-info">
+					Подробнее про комбинации
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 733.3 733.3"
+						style="enable-background:new 0 0 733.3 733.3" xml:space="preserve">
+						<style>
+							.st0 {
+								fill: none;
+								stroke: currentColor;
+								stroke-width: 66.6667;
+								stroke-linecap: round;
+								stroke-linejoin: round;
+								stroke-miterlimit: 133.3333
+							}
+						</style>
+						<g id="Complete">
+							<g id="info-circle">
+								<circle id="_--Circle" class="st0" cx="366.7" cy="366.7" r="333.3" />
+								<path class="st0" d="M366.7 366.7V500m0-266.7h0" />
+							</g>
+						</g>
+					</svg>
+				</a>
+			</p>
+		</div>
+	</section>
+	<section class="numbers">
+		<div class="container">
+			<ul class="numbers-list">
+
+			</ul>
+		</div>
+	</section>
+
+	<div class="popup-wrapper" id="popup-buy">
+		<div class="popup">
+			<div class="popup-inner">
+				<button class="popup-close">X</button>
+				<h3>Приобрести номер</h3>
+				<div class="popup-number">
+					<p>
+						+7 (926) 666-66-66
+					</p>
+					<button class="popup-copy" id="popup-copy">
+						<img src="svg/copy-icon.svg" alt="">
+						<div class="popup-copy__check"></div>
+					</button>
+				</div>
+				<a href="https://t.me/seekgain" target="_blank" class="popup-btn">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+						<path
+							d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z" />
+					</svg>
+					Перейти в телеграм
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup-wrapper" id="popup-info">
+		<div class="popup">
+			<button class="popup-close">X</button>
+			<h4 class="popup__title">
+				Информация
+			</h4>
+			<div class="popup__inner">
+				<input type="checkbox" name="accord" value="" id="accord-1">
+				<label for="accord-1" class="popup__accord-item">
+					<div class="popup__accord-title">
+						<span>
+							ПОДРОБНЕЕ ПРО КАТЕГОРИИ НОМЕРОВ
+						</span>
+					</div>
+					<div class="popup__accord-desc">
+						<div class="text">
+							<p>
+								PREMIUM - номера в которых имеется сразу ДВЕ комбинации, к примеру DOUBLE + COMBO
+							</p>
+							<p>
+								DOUBLE - комбинация, в которой дублируется код сотового оператора, а именно первые 3 цифры после «+7», к
+								примеру <span>+7(909)909-xx-xx</span>.
+							</p>
+							<p>
+								COMBO - комбинация, в которой повторяется двузначное число. Чем больше повторений, тем более ценный
+								номер.
+								Максимальная редкость COMBO X4, выглядит следующим образом: <span>+7(916)х16-16-16</span>.
+							</p>
+							<p>
+								000, 666, 777 - Счастливые комбинации из 3 чисел.
+							</p>
+						</div>
+					</div>
+				</label>
+				<input type="checkbox" name="accord" value="" id="accord-2">
+				<label for="accord-2" class="popup__accord-item">
+					<div class="popup__accord-title">
+						<span>
+							ПОДРОБНЕЕ ПРО ОФОРМЛЕНИЕ НОМЕРА
+						</span>
+					</div>
+					<div class="popup__accord-desc">
+						<p>
+							Оформление происходит в Москве в одном из салонов сотовой связи. Номер оформяется полностью официально на
+							ваши паспортные данные.
+						</p>
+						<p>
+							Дополнительных доплат за переоформление номера нет.
+						</p>
+					</div>
+				</label>
+				<input type="checkbox" name="accord" value="" id="accord-3">
+				<label for="accord-3" class="popup__accord-item">
+					<div class="popup__accord-title">
+						<span>
+							КОНТАКТЫ
+						</span>
+					</div>
+					<div class="popup__accord-desc">
+						<p>
+							Телеграм: <a href="https://t.me/seekgain" target="_blank">https://t.me/seekgain</a>
+						</p>
+					</div>
+				</label>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="module" src="js/index.js"></script>
+</body>
+
+</html>

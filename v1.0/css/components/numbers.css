@@ -14,7 +14,7 @@
   grid-template-columns:
     var(--column-category) var(--column-number) var(--column-price)
     var(--column-btn);
-  gap: calc(var(--index) * 0.3);
+  gap: min(1%, 10px);
   text-transform: uppercase;
 }
 
@@ -39,6 +39,22 @@
   justify-content: center;
 }
 
+/* .numbers-list li div:nth-child(1) {
+  width: var(--column-category);
+}
+
+.numbers-list li div:nth-child(2) {
+  width: var(--column-number);
+}
+
+.numbers-list li div:nth-child(3) {
+  width: var(--column-price);
+}
+
+.numbers-list li div:nth-child(4) {
+  width: var(--column-btn);
+} */
+
 .numbers-list li button {
   background-color: transparent;
   cursor: pointer;
@@ -51,7 +67,7 @@
 
 .numbers-list li span:first-child {
   background-color: transparent;
-  padding: calc(var(--index) * 0.5) calc(var(--index) * 0.4);
+  padding: calc(var(--index) * 0.2) calc(var(--index) * 0.4);
   border: 4px solid var(--border-color);
   font-size: min(calc(1vw * 1.9), 20px);
   color: #fff;

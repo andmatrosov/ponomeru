@@ -11,15 +11,15 @@
 
   /* NUMBER COLUMNS */
   --column-category: 15%;
-  --column-number: 42%;
-  --column-price: 20%;
-  --column-btn: 20%;
+  --column-number: min(30vw, 32%);
+  --column-price: min(30vw, 32%);
+  --column-btn: min(20%, 150px);
 }
 
 @media (max-width: 480px) {
   :root {
-    --column-number: calc(60% - calc(calc(var(--index) * 0.3) / 2));
-    --column-price: calc(20% - calc(calc(var(--index) * 0.3) / 2));
+    --column-number: calc(44% - calc(calc(var(--index) * 0.3) / 2));
+    --column-price: calc(35% - calc(calc(var(--index) * 0.3) / 2));
     --column-btn: 20%;
   }
 }

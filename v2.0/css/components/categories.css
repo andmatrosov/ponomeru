@@ -1,0 +1,223 @@
+@import url(../vars.css);
+.categories {
+  margin: calc(var(--index) * 1.2) 0;
+}
+
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  max-width: 600px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  /* border: 1px solid red; */
+}
+
+.categories p {
+  margin: 10px 0 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.categories p a {
+  display: inline-block;
+  position: relative;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.categories p svg {
+  position: relative;
+  top: 2px;
+  width: 14px;
+  color: inherit;
+}
+
+.categories-list__item {
+  width: 32%;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.categories-list__item > .item-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(1vw * 0.1) calc(1vw * 0.4);
+  border: 4px solid var(--border-color);
+  color: #fff;
+}
+
+.categories-list__item .line-1 {
+  animation: outline1 3s infinite ease;
+}
+.categories-list__item .line-2 {
+  animation: outline2 3s infinite ease;
+}
+.categories-list__item .line-3 {
+  animation: outline3 3s infinite ease;
+}
+.categories-list__item .line-4 {
+  animation: outline4 3s infinite ease;
+}
+
+.line-1 {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 4px;
+  left: 0;
+  bottom: 0;
+}
+.line-2 {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 4px;
+  left: 0;
+  top: 0;
+}
+.line-3 {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 4px;
+  right: 0;
+  top: 0;
+}
+.line-4 {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 4px;
+  right: 0;
+  bottom: 0;
+}
+
+.premium > .line-1,
+.premium > .line-2,
+.premium > .line-3,
+.premium > .line-4 {
+  background-color: var(--premium-color, yellow);
+}
+
+.gold > .line-1,
+.gold > .line-2,
+.gold > .line-3,
+.gold > .line-4 {
+  background-color: var(--gold-color, yellow);
+}
+
+.silver > .line-1,
+.silver > .line-2,
+.silver > .line-3,
+.silver > .line-4 {
+  background-color: var(--silver-color, yellow);
+}
+
+.combo > .line-1,
+.combo > .line-2,
+.combo > .line-3,
+.combo > .line-4 {
+  background-color: var(--combo-color, yellow);
+}
+
+.other > .line-1,
+.other > .line-2,
+.other > .line-3,
+.other > .line-4 {
+  background-color: var(--other-color, yellow);
+}
+
+.categories-list__item.hide span[class^='line-'] {
+  background-color: transparent;
+}
+
+@keyframes outline1 {
+  0% {
+    height: 100%;
+    bottom: 0;
+  }
+  54% {
+    height: 0;
+    bottom: 100%;
+  }
+  55% {
+    height: 0;
+    bottom: 0;
+  }
+  100% {
+    height: 100%;
+    bottom: 0;
+  }
+}
+@keyframes outline2 {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  55% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes outline3 {
+  0% {
+    height: 100%;
+    top: 0;
+  }
+  54% {
+    height: 0;
+    top: 100%;
+  }
+  55% {
+    height: 0;
+    top: 0;
+  }
+  100% {
+    height: 100%;
+    top: 0;
+  }
+}
+
+@keyframes outline4 {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  55% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    right: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .categories-list {
+    padding: 0 10px;
+  }
+
+  .categories-list__item > .item-inner {
+    font-size: 14px;
+  }
+
+  .categories p {
+    font-size: 14px;
+  }
+}

@@ -11,13 +11,19 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100%;
+  overflow: auto;
+}
+
 body {
   font-family: 'Russo One', sans-serif;
   font-weight: 400;
   background-image: linear-gradient(to top, #0a031d, #1e011f);
   background-size: 100vh;
-  min-height: 100vh;
+  min-height: 100%;
   color: #f4f4f4;
+  overflow: hidden;
 }
 
 .container {

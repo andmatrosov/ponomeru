@@ -1,0 +1,180 @@
+.numbers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0 0 40px;
+  list-style: none;
+}
+.numbers-list li {
+  padding: 0;
+  width: 100%;
+  display: grid;
+  font-size: calc(var(--font-size) * 0.8);
+  grid-template-columns:
+    var(--column-category) var(--column-number) var(--column-price)
+    var(--column-btn);
+  gap: min(1%, 10px);
+  text-transform: uppercase;
+}
+
+.numbers-list li > * {
+  position: relative;
+}
+
+.numbers-list li span:first-child {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  padding: 0 calc(var(--index) * 0.4);
+  border: 4px solid var(--border-color);
+  height: 100%;
+  vertical-align: middle;
+}
+
+.numbers-list li div span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .numbers-list li div:nth-child(1) {
+  width: var(--column-category);
+}
+
+.numbers-list li div:nth-child(2) {
+  width: var(--column-number);
+}
+
+.numbers-list li div:nth-child(3) {
+  width: var(--column-price);
+}
+
+.numbers-list li div:nth-child(4) {
+  width: var(--column-btn);
+} */
+
+.numbers-list li button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.numbers-list li button span {
+  display: inline-block;
+}
+
+.numbers-list li span:first-child {
+  background-color: transparent;
+  padding: calc(var(--index) * 0.2) calc(var(--index) * 0.4);
+  border: 4px solid var(--border-color);
+  font-size: min(calc(1vw * 1.9), 20px);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 950px) {
+  .numbers-list li {
+    padding: 0 10px;
+    font-size: var(--index);
+  }
+}
+
+@media (max-width: 480px) {
+  .numbers-list li {
+    grid-template-columns:
+      var(--column-number) var(--column-price)
+      var(--column-btn);
+  }
+  .numbers-list li div:first-child {
+    display: none;
+  }
+
+  .numbers-list li span:first-child {
+    padding: calc(var(--index) * 0.5) calc(var(--index) * 0.2);
+    font-size: max(calc(1vw * 1.2), 12px);
+  }
+}
+
+.numbers-list li .line-1 {
+  animation: outline1 3s infinite ease;
+}
+.numbers-list li .line-2 {
+  animation: outline2 3s infinite ease;
+}
+.numbers-list li .line-3 {
+  animation: outline3 3s infinite ease;
+}
+.numbers-list li .line-4 {
+  animation: outline4 3s infinite ease;
+}
+
+.line-1 {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 4px;
+  left: 0;
+  bottom: 0;
+}
+.line-2 {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 4px;
+  left: 0;
+  top: 0;
+}
+.line-3 {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 4px;
+  right: 0;
+  top: 0;
+}
+.line-4 {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 4px;
+  right: 0;
+  bottom: 0;
+}
+
+.numbers-list li.premium .line-1,
+.numbers-list li.premium .line-2,
+.numbers-list li.premium .line-3,
+.numbers-list li.premium .line-4 {
+  background-color: var(--premium-color, yellow);
+}
+
+.numbers-list li.gold .line-1,
+.numbers-list li.gold .line-2,
+.numbers-list li.gold .line-3,
+.numbers-list li.gold .line-4 {
+  background-color: var(--gold-color, yellow);
+}
+
+.numbers-list li.silver .line-1,
+.numbers-list li.silver .line-2,
+.numbers-list li.silver .line-3,
+.numbers-list li.silver .line-4 {
+  background-color: var(--silver-color, yellow);
+}
+
+.numbers-list li.combo .line-1,
+.numbers-list li.combo .line-2,
+.numbers-list li.combo .line-3,
+.numbers-list li.combo .line-4 {
+  background-color: var(--combo-color, yellow);
+}
+
+.numbers-list li.other .line-1,
+.numbers-list li.other .line-2,
+.numbers-list li.other .line-3,
+.numbers-list li.other .line-4 {
+  background-color: var(--other-color, yellow);
+}
