@@ -26,6 +26,7 @@
 .numbers-list li button {
   position: relative;
   background-color: #323232;
+  background-repeat: no-repeat;
   background-size: 200%;
   will-change: background-image;
   transform: translateZ(0);
@@ -35,70 +36,33 @@
 
 .numbers-list li.premium div,
 .numbers-list li.premium button {
-  background-image: linear-gradient(
-    45deg,
-    #323232 20%,
-    #323232 40%,
-    var(--premium-color) 50%,
-    var(--premium-color) 55%,
-    #323232 70%,
-    #323232 100%
-  );
+  background-image: url(../../img/bg-premium.png);
 }
 
-.numbers-list li.gold div,
-.numbers-list li.gold button {
-  background-image: linear-gradient(
-    45deg,
-    #323232 20%,
-    #323232 40%,
-    var(--gold-color) 50%,
-    var(--gold-color) 55%,
-    #323232 70%,
-    #323232 100%
-  );
+.numbers-list li.double div,
+.numbers-list li.double button {
+  background-image: url(../../img/bg-gold.png);
 }
 
 .numbers-list li.silver div,
 .numbers-list li.silver button {
-  background-image: linear-gradient(
-    45deg,
-    #323232 20%,
-    #323232 40%,
-    var(--silver-color) 50%,
-    var(--silver-color) 55%,
-    #323232 70%,
-    #323232 100%
-  );
+  background-image: url(../../img/bg-silver.png);
 }
 
 .numbers-list li.combo div,
 .numbers-list li.combo button {
-  background-image: linear-gradient(
-    45deg,
-    #323232 20%,
-    #323232 40%,
-    var(--combo-color) 50%,
-    var(--combo-color) 55%,
-    #323232 70%,
-    #323232 100%
-  );
+  background-image: url(../../img/bg-combo.png);
 }
 
 .numbers-list li.other div,
 .numbers-list li.other button {
-  background-image: linear-gradient(
-    45deg,
-    #323232 20%,
-    #323232 40%,
-    var(--other-color) 50%,
-    var(--other-color) 55%,
-    #323232 70%,
-    #323232 100%
-  );
+  background-image: url(../../img/bg-other.png);
 }
 
 @keyframes shine {
+  from {
+    background-position: -50% center;
+  }
   to {
     background-position: 200% center;
   }

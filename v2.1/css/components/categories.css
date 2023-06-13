@@ -46,6 +46,7 @@
   cursor: pointer;
   background-color: #323232;
   background-size: 200%;
+  background-repeat: no-repeat;
   will-change: background-image;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -53,60 +54,29 @@
 }
 
 .categories-list__item.premium {
-  background-image: linear-gradient(
-    45deg,
-    #323232 20%,
-    #323232 40%,
-    var(--premium-color) 50%,
-    var(--premium-color) 55%,
-    #323232 70%,
-    #323232 100%
-  );
+  background-image: url(../../img/bg-premium.png);
 }
 
-.categories-list__item.gold {
-  background-image: linear-gradient(
-    45deg,
-    #323232 20%,
-    #323232 40%,
-    var(--gold-color) 50%,
-    var(--gold-color) 55%,
-    #323232 70%,
-    #323232 100%
-  );
+.categories-list__item.double {
+  background-image: url(../../img/bg-gold.png);
 }
 .categories-list__item.silver {
-  background-image: linear-gradient(
-    45deg,
-    #323232 20%,
-    #323232 40%,
-    var(--silver-color) 50%,
-    var(--silver-color) 55%,
-    #323232 70%,
-    #323232 100%
-  );
+  background-image: url(../../img/bg-silver.png);
 }
 .categories-list__item.combo {
-  background-image: linear-gradient(
-    45deg,
-    #323232 20%,
-    #323232 40%,
-    var(--combo-color) 50%,
-    var(--combo-color) 55%,
-    #323232 70%,
-    #323232 100%
-  );
+  background-image: url(../../img/bg-combo.png);
 }
 .categories-list__item.other {
-  background-image: linear-gradient(
-    45deg,
-    #323232 20%,
-    #323232 40%,
-    var(--other-color) 50%,
-    var(--other-color) 55%,
-    #323232 70%,
-    #323232 100%
-  );
+  background-image: url(../../img/bg-other.png);
+}
+
+@keyframes shine {
+  from {
+    background-position: -50% center;
+  }
+  to {
+    background-position: 200% center;
+  }
 }
 
 .categories-list__item.hide {
@@ -122,7 +92,7 @@
   margin: 2px;
   padding: min(calc(1vw * 0.4), 8px) min(calc(1vw * 0.4), 10px);
   color: #fff;
-  background-color: black;
+  background-color: #09011e;
 }
 
 @media (max-width: 600px) {
@@ -136,5 +106,11 @@
 
   .categories p {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .categories p a {
+    font-size: 12px;
   }
 }

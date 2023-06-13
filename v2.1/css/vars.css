@@ -1,0 +1,33 @@
+:root {
+  --premium-color: #ff00c7;
+  --gold-color: #f8c439;
+  --silver-color: #ffffff;
+  --combo-color: #ff5c00;
+  --other-color: #bdff00;
+  --border-color: #46484a;
+
+  --index: calc(1vw + 1vh);
+  --font-size: max(min(calc(1vw * 0.8), 30px), 12px);
+
+  /* NUMBER COLUMNS */
+  --column-category: 15%;
+  --column-number: min(30vw, 32%);
+  --column-price: min(30vw, 32%);
+  --column-btn: min(20%, 150px);
+}
+
+@media (max-width: 580px) {
+  :root {
+    --column-number: calc(44% - calc(calc(var(--index) * 0.3) / 2));
+    --column-price: calc(35% - calc(calc(var(--index) * 0.3) / 2));
+    --column-btn: 20%;
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --column-number: calc(45% - calc(calc(var(--index) * 0.3) / 2));
+    --column-price: calc(32% - calc(calc(var(--index) * 0.3) / 2));
+    --column-btn: calc(23% - calc(calc(var(--index) * 0.3) / 2));
+  }
+}
